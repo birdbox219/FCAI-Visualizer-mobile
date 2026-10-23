@@ -1,0 +1,8 @@
+{
+  "name": "FCAI Visualizer",
+  "description": "Interactive Algorithm and Data Structure Visualizer featuring Sorting, Searching, Trees, Graphs, Data Structures, and Practice Quizzes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

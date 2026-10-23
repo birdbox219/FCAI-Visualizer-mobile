@@ -1,0 +1,20 @@
+{
+  "title": "查找",
+  "canvasAria": "查找算法可视化区域",
+  "descriptionFallback": "{{name}}查找",
+  "target": "查找目标：",
+  "result": {
+    "foundAt": "✅ 在索引 {{index}} 处找到",
+    "notFound": "❌ 未找到"
+  },
+  "legend": {
+    "unseen": "尚未检查",
+    "scanned": "已扫描",
+    "current": "当前项",
+    "found": "已找到",
+    "notFound": "未找到"
+  },
+  "canvas": {
+    "emptyState": "请先生成一个数组"
+  }
+}

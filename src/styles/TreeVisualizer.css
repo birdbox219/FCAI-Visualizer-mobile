@@ -1,0 +1,177 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   Tree Visualizer — Scoped Styles (ported from BST.css)
+   ═══════════════════════════════════════════════════════════════════════ */
+.tree-page{display:flex;height:100%;overflow:hidden}
+
+/* ── Graph Algorithm Navigation Bar ──────────────────────────────────── */
+.graph-algo-nav{display:flex;align-items:center;gap:8px;padding:10px 18px;background:var(--surface);border-bottom:1px solid var(--border);flex-shrink:0}
+.graph-algo-tab{padding:7px 16px;border-radius:var(--radius);border:1px solid var(--border);background:transparent;color:var(--text-muted);font-family:var(--font-body);font-size:13px;font-weight:600;cursor:pointer;transition:all .15s ease}
+.graph-algo-tab:hover{color:var(--text);border-color:var(--accent)}
+.graph-algo-tab.active{background:color-mix(in srgb,var(--accent) 15%,transparent);border-color:var(--accent);color:var(--accent)}
+
+/* ── Side Panel ─────────────────────────────────────────────────────── */
+.tree-panel{width:300px;min-width:300px;height:100%;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;flex-shrink:0;background-image:linear-gradient(to bottom,rgba(108,99,255,.25) 0px,transparent 5px);transition:background .25s,border-color .25s}
+.tree-panel::-webkit-scrollbar{width:4px}
+.tree-panel::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+
+.tree-panel-title{padding:16px 18px 10px;display:flex;flex-direction:column;gap:2px}
+.tree-title-main{font-family:var(--font-mono);font-size:28px;font-weight:700;color:var(--accent);line-height:1.1}
+.tree-title-sub{font-size:16px;font-weight:600;color:color-mix(in srgb,var(--text) 55%,transparent)}
+.tree-title-edition{font-size:11px;color:color-mix(in srgb,var(--text-muted) 80%,transparent);letter-spacing:.05em}
+
+/* ── Theme toggle ────────────────────────────────────────────────────── */
+.tree-btn-theme{margin:0 18px 4px;padding:7px 12px;border-radius:6px;border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);background:color-mix(in srgb,var(--accent) 10%,transparent);color:var(--accent);font-family:var(--font-body);font-size:12px;font-weight:600;cursor:pointer;transition:background .15s;text-align:left;letter-spacing:.03em}
+.tree-btn-theme:hover{background:color-mix(in srgb,var(--accent) 22%,transparent)}
+
+.tree-divider{border:none;border-top:1px solid color-mix(in srgb,var(--border) 65%,transparent);margin:6px 18px}
+
+/* ── Sections ────────────────────────────────────────────────────────── */
+.tree-section{padding:6px 18px 8px;display:flex;flex-direction:column;gap:6px}
+.tree-section-label{font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--text-muted);padding-left:8px;border-left:3px solid var(--accent);margin-bottom:2px}
+
+/* ── Inputs ──────────────────────────────────────────────────────────── */
+.tree-input-row{display:flex}
+.tree-val-input{width:100%;padding:10px 14px;font-family:var(--font-mono);font-size:20px;font-weight:700;text-align:center;background:color-mix(in srgb,var(--accent) 8%,transparent);border:1.5px solid var(--border);border-radius:var(--radius);color:var(--text);outline:none;transition:border-color .15s,background .15s;caret-color:var(--accent)}
+.tree-val-input:focus{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent)}
+.tree-tip{font-size:11px;color:color-mix(in srgb,var(--text-muted) 70%,transparent);padding-left:2px}
+.tree-tip kbd{font-family:var(--font-mono);font-size:10px;background:color-mix(in srgb,var(--text-muted) 20%,transparent);border:1px solid var(--border);border-radius:3px;padding:0 4px}
+
+/* ── Buttons ─────────────────────────────────────────────────────────── */
+.tree-btn{width:100%;box-sizing:border-box;padding:12px 16px;border:1.5px solid transparent;border-radius:var(--radius);font-family:var(--font-body);font-size:16px;font-weight:700;cursor:pointer;transition:background .15s,border-color .15s,transform .08s;letter-spacing:.02em}
+.tree-btn:active{transform:scale(.97)}
+.tree-btn.sm{padding:9px 12px;font-size:14px}
+
+.tree-btn-accent{background:color-mix(in srgb,var(--accent) 18%,transparent);border-color:color-mix(in srgb,var(--accent) 35%,transparent);color:var(--accent)}
+.tree-btn-accent:hover{background:color-mix(in srgb,var(--accent) 34%,transparent)}
+.tree-btn-danger{background:color-mix(in srgb,var(--accent2) 15%,transparent);border-color:color-mix(in srgb,var(--accent2) 30%,transparent);color:var(--accent2)}
+.tree-btn-danger:hover{background:color-mix(in srgb,var(--accent2) 30%,transparent)}
+.tree-btn-danger-dim{background:color-mix(in srgb,#320c0c 90%,transparent);border-color:color-mix(in srgb,var(--accent2) 22%,transparent);color:color-mix(in srgb,var(--accent2) 80%,transparent)}
+.tree-btn-danger-dim:hover{background:color-mix(in srgb,var(--accent2) 22%,transparent)}
+.tree-btn-orange{background:color-mix(in srgb,var(--accent4) 15%,transparent);border-color:color-mix(in srgb,var(--accent4) 30%,transparent);color:var(--accent4)}
+.tree-btn-orange:hover{background:color-mix(in srgb,var(--accent4) 30%,transparent)}
+.tree-btn-ghost{background:color-mix(in srgb,var(--border) 25%,transparent);border-color:color-mix(in srgb,var(--border) 40%,transparent);color:var(--text)}
+.tree-btn-ghost:hover{background:color-mix(in srgb,var(--accent) 12%,transparent);border-color:color-mix(in srgb,var(--accent) 25%,transparent)}
+.tree-btn-green{background:color-mix(in srgb,var(--accent3) 20%,transparent);border-color:color-mix(in srgb,var(--accent3) 40%,transparent);color:var(--accent3);flex:1}
+.tree-btn-green:hover{background:color-mix(in srgb,var(--accent3) 36%,transparent)}
+
+.tree-btn-row-2{display:flex;gap:6px}
+.tree-btn-row-2 .tree-btn{width:50%}
+
+.tree-gen-row{display:flex;align-items:center;gap:8px}
+.tree-gen-row label{font-size:15px;color:var(--text-muted);font-weight:600}
+.tree-rand-input{width:64px;padding:7px 10px;font-family:var(--font-mono);font-size:15px;font-weight:700;text-align:center;background:color-mix(in srgb,var(--text-muted) 8%,transparent);border:1.5px solid var(--border);border-radius:var(--radius);color:var(--text);outline:none;transition:border-color .15s}
+.tree-rand-input:focus{border-color:var(--accent3)}
+
+/* ── Speed buttons ───────────────────────────────────────────────────── */
+.tree-speed-row{display:flex;gap:6px}
+.tree-speed-btn{flex:1;padding:9px 4px;border-radius:var(--radius);border:1.5px solid transparent;font-family:var(--font-body);font-size:13px;font-weight:700;cursor:pointer;transition:background .15s,border-color .15s}
+.tree-speed-btn:nth-child(1){background:color-mix(in srgb,#37b46e 10%,transparent);color:#37b46e}
+.tree-speed-btn:nth-child(2){background:color-mix(in srgb,#5aa0ff 10%,transparent);color:#5aa0ff}
+.tree-speed-btn:nth-child(3){background:color-mix(in srgb,#ff8c37 10%,transparent);color:#ff8c37}
+.tree-speed-btn.active:nth-child(1){background:color-mix(in srgb,#37b46e 52%,transparent);border-color:#37b46e;color:#fff}
+.tree-speed-btn.active:nth-child(2){background:color-mix(in srgb,#5aa0ff 52%,transparent);border-color:#5aa0ff;color:#fff}
+.tree-speed-btn.active:nth-child(3){background:color-mix(in srgb,#ff8c37 52%,transparent);border-color:#ff8c37;color:#fff}
+.tree-speed-btn:hover{filter:brightness(1.25)}
+
+.tree-btn-preset{background:color-mix(in srgb,#7c3aed 12%,transparent);border-color:color-mix(in srgb,#7c3aed 30%,transparent);color:#a78bfa;font-size:12px;font-weight:600;letter-spacing:.02em;margin-bottom:4px}
+.tree-btn-preset:hover{background:color-mix(in srgb,#7c3aed 28%,transparent);border-color:color-mix(in srgb,#7c3aed 55%,transparent);color:#c4b5fd}
+
+/* ── Status bar ──────────────────────────────────────────────────────── */
+.tree-status-bar{margin-top:auto;width:100%;background:color-mix(in srgb,var(--bg) 97%,transparent);border-top:1px solid var(--border);padding:10px 18px 14px}
+.tree-status-title{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--text-muted);margin-bottom:4px;font-family:var(--font-mono)}
+.tree-stat-line1{font-size:15px;font-weight:700;color:var(--accent);min-height:20px}
+.tree-stat-line2{font-size:12px;color:var(--text);margin-top:3px;min-height:16px;line-height:1.4}
+
+/* ── Canvas Area ─────────────────────────────────────────────────────── */
+.tree-canvas-wrap{flex:1;position:relative;overflow:hidden;background:var(--bg);transition:background .25s}
+.tree-canvas{display:block;width:100%;height:100%;cursor:grab}
+.tree-canvas:active{cursor:grabbing}
+
+/* ── Canvas overlays ─────────────────────────────────────────────────── */
+.tree-live-stats{position:absolute;top:14px;right:14px;background:color-mix(in srgb,var(--surface) 94%,transparent);border:1.5px solid var(--border);border-top:3px solid var(--accent);border-radius:var(--radius);padding:12px 16px 10px;min-width:170px;backdrop-filter:blur(6px)}
+.tree-ls-label{font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--text-muted);margin-bottom:6px}
+.tree-ls-nodes,.tree-ls-height{font-family:var(--font-mono);font-size:17px;font-weight:700;color:var(--text);line-height:1.55}
+.tree-ls-balance{font-size:13px;font-weight:700;margin-top:4px}
+.tree-ls-balanced{color:var(--accent3)}
+.tree-ls-unbalanced{color:var(--accent2)}
+
+.tree-depth-legend{position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:5px;background:color-mix(in srgb,#141828 80%,transparent);border-radius:20px;padding:5px 12px 5px 10px;backdrop-filter:blur(4px)}
+.tree-legend-label{font-size:12px;color:var(--text-muted);font-weight:600;margin-right:4px}
+.tree-legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+
+.tree-hints{position:absolute;bottom:10px;left:14px;display:flex;align-items:center;flex-wrap:wrap;gap:4px 6px;max-width:calc(100% - 28px);padding:6px 9px;border:1px solid var(--border);border-radius:10px;background:color-mix(in srgb,var(--surface) 94%,transparent);box-shadow:0 3px 12px rgba(0,0,0,.12);backdrop-filter:blur(8px);color:var(--text);font-size:11px;font-weight:500;line-height:1.35}
+.tree-hint{display:inline-flex;align-items:center;gap:5px;min-width:0;padding:2px 5px;color:var(--text);white-space:nowrap}
+.tree-hint+.tree-hint{border-left:1px solid var(--border);padding-left:10px}
+.tree-hint-icon{display:inline-flex;align-items:center;justify-content:center;flex:none;color:var(--accent)}
+.tree-hint-icon svg{display:block}
+.tree-hints kbd{padding:1px 4px;border:1px solid var(--border);border-radius:4px;background:color-mix(in srgb,var(--bg) 86%,transparent);color:var(--text);font-family:var(--font-mono);font-size:10px;font-weight:700}
+
+.tree-trav-bar{position:absolute;bottom:0;left:0;right:0;background:color-mix(in srgb,var(--bg) 97%,transparent);border-top:1px solid var(--border);padding:8px 18px 10px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.tree-trav-title{font-family:var(--font-mono);font-size:14px;font-weight:700;color:var(--text-muted);white-space:nowrap}
+.tree-trav-result{font-family:var(--font-mono);font-size:14px;font-weight:600;color:var(--accent);word-break:break-all}
+
+.tree-popup{position:absolute;top:54px;left:50%;transform:translateX(-50%);min-width:260px;max-width:520px;background:color-mix(in srgb,#0c101c 96%,transparent);border:1.5px solid var(--accent);border-radius:12px;padding:12px 20px 16px;text-align:center;pointer-events:none;backdrop-filter:blur(8px);z-index:100}
+.tree-popup-msg{font-family:var(--font-body);font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:6px}
+.tree-popup-progress{height:3px;border-radius:2px;background:var(--accent);opacity:.6;transition:width .1s linear}
+
+/* Red-Black Tree operation history and property reference */
+.tree-panel-rbt .tree-preset-section{display:none}
+.rbt-learning-panel{gap:8px}
+.rbt-step-count,.rbt-properties-title{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--text-muted)}
+.rbt-step-count{padding:6px 8px;border-radius:6px;background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.rbt-step-title{margin:0;color:var(--accent);font-size:16px;line-height:1.3}
+.rbt-step-explanation{margin:0;color:var(--text);font-size:13px;line-height:1.5}
+.rbt-step-involved{min-height:16px;color:var(--text-muted);font-size:11px;line-height:1.4;overflow-wrap:anywhere}
+.rbt-lock-message{padding:7px 8px;border-left:2px solid var(--accent4);background:color-mix(in srgb,var(--accent4) 8%,transparent);color:var(--text-muted);font-size:11px;line-height:1.4}
+.rbt-playback-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.rbt-playback-controls .tree-btn{min-width:0;padding:8px 4px;font-size:12px}
+.rbt-playback-controls .tree-btn:disabled,.tree-panel-rbt .tree-btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.tree-panel-rbt button:focus-visible,.tree-panel-rbt input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.rbt-properties-title{margin-top:4px}
+.rbt-property-status{color:var(--text-muted);font-size:11px;line-height:1.4}
+.rbt-properties-list{display:flex;flex-direction:column;gap:5px;margin:0;padding-left:24px;color:var(--text-muted);font-size:11px;line-height:1.4}
+.rbt-properties-list li{padding:3px 5px;border-radius:4px;transition:background .2s,color .2s}
+.rbt-properties-list li.is-current{background:color-mix(in srgb,#ffb547 18%,transparent);color:var(--text);font-weight:700}
+.rbt-properties-list li.is-satisfied{background:color-mix(in srgb,var(--accent3) 14%,transparent);color:var(--accent3)}
+
+@media(max-width: 1199px) {
+  .tree-panel{width:260px;min-width:260px}
+  .tree-title-main{font-size:24px}
+  .tree-btn{font-size:14px}
+}
+@media(max-width: 767px) {
+  .tree-page{flex-direction:column;overflow-y:auto;overflow-x:hidden}
+  .tree-panel{width:100%;min-width:100%;height:auto;max-height:none;border-right:none;border-bottom:1px solid var(--border);flex-shrink:0}
+  .tree-canvas-wrap{min-height:400px;flex-shrink:0}
+  .tree-btn, .tree-val-input, .tree-rand-input, .tree-btn-theme {min-height:44px}
+  .tree-title-main{font-size:clamp(22px, 5vw, 28px)}
+  .tree-code-panel{bottom:10px;right:10px;width:calc(100% - 20px);max-width:none}
+  .rbt-playback-controls{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .rbt-playback-controls .tree-btn{font-size:11px;padding:8px 2px}
+  .tree-hints{bottom:8px;left:8px;max-width:calc(100% - 16px);gap:3px;padding:5px 6px;font-size:10px}
+  .tree-hint{gap:4px;padding:2px 3px;white-space:normal}
+  .tree-hint+.tree-hint{padding-left:6px}
+  .tree-hint-icon svg{width:12px;height:12px}
+}
+
+/* ── Code Trace Panel ──────────────────────────────────────────────────── */
+.tree-code-panel { position: absolute; bottom: 56px; right: 24px; width: 380px; max-height: 340px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.2); z-index: 15; display: flex; flex-direction: column; overflow: hidden; opacity: 0; transform: translateY(20px) scale(0.95); pointer-events: none; transition: opacity 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.tree-code-panel.visible { opacity: 1; transform: translateY(0) scale(1); pointer-events: all; }
+.tree-code-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--border); background: linear-gradient(135deg, var(--surface) 0%, rgba(108, 99, 255, 0.06) 100%); }
+.tree-code-title { font-size: 13px; font-weight: 700; color: var(--text); letter-spacing: 0.5px; }
+.tree-code-lang-bar { display: flex; gap: 2px; background: var(--bg); border-radius: 6px; padding: 2px; border: 1px solid var(--border); }
+.tree-code-lang-btn { padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; font-family: 'JetBrains Mono', monospace; background: none; border: none; color: var(--text-muted); cursor: pointer; transition: all 0.15s ease; letter-spacing: 0.3px; }
+.tree-code-lang-btn:hover { color: var(--text); }
+.tree-code-lang-btn.active { background: var(--accent); color: #fff; }
+.tree-code-close-btn { background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 14px; font-weight: 700; transition: color 0.2s; padding: 0 4px; }
+.tree-code-close-btn:hover { color: var(--accent2); }
+.tree-code-step-msg { padding: 10px 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; color: var(--text-muted); border-bottom: 1px solid var(--border); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-height: 38px; display: flex; align-items: center; transition: color 0.2s, background 0.2s; }
+.tree-code-step-msg.done { color: var(--accent3); background: color-mix(in srgb, var(--accent3) 8%, transparent); }
+.tree-code-progress-wrap { width: 100%; height: 2px; background: var(--border); }
+.tree-code-progress-bar { height: 100%; background: var(--accent); width: 0%; transition: width 0.2s ease; }
+.tree-code-pre { margin: 0; padding: 8px 0; overflow-y: auto; overflow-x: auto; max-height: 220px; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.6; color: var(--text); background: var(--bg); }
+.tree-cline { display: flex; align-items: flex-start; gap: 8px; padding: 2px 12px 2px 6px; border-left: 3px solid transparent; transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; position: relative; }
+.tree-cline.active { background: color-mix(in srgb, var(--accent) 18%, transparent); border-left-color: var(--accent); box-shadow: inset 0 0 20px color-mix(in srgb, var(--accent) 8%, transparent); animation: treeCodePulse 0.5s ease; }
+@keyframes treeCodePulse { 0% { background: color-mix(in srgb, var(--accent) 35%, transparent); } 100% { background: color-mix(in srgb, var(--accent) 18%, transparent); } }
+.tree-cline-num { color: var(--text-muted); font-size: 10px; min-width: 18px; text-align: right; user-select: none; opacity: 0.45; padding-top: 2px; }
+.tree-cline-text { white-space: pre; flex: 1; }

@@ -1,0 +1,94 @@
+{
+  "brand": "FCAI-Visualizer",
+  "campus": "FCAI-CU",
+  "header": {
+    "eyebrow": "FCAI-CU · منصّة تعليمية",
+    "toggleNav": "فتح/إغلاق قائمة التنقّل",
+    "startLearning": "ابدأ التعلّم",
+    "switchTheme": "التبديل إلى الوضع {{mode}}"
+  },
+  "theme": {
+    "light": "الفاتح",
+    "dark": "الداكن",
+    "modeLabel": "الوضع {{name}}"
+  },
+  "settings": {
+    "language": "اللغة",
+    "digits": "نمط الأرقام",
+    "digitsToLatn": "استخدام الأرقام الغربية (0–9)",
+    "digitsToArab": "استخدام الأرقام العربية الهندية (٠–٩)"
+  },
+  "routes": {
+    "home": "الرئيسية",
+    "data-structure": "هياكل البيانات",
+    "advanced-data-structure": "هياكل البيانات المتقدّمة",
+    "course-trees": "الأشجار",
+    "course-avl-tree": "شجرة AVL",
+    "course-red-black-tree": "شجرة حمراء-سوداء",
+    "sorting": "خوارزميات الترتيب",
+    "searching": "خوارزميات البحث",
+    "data-structures": "هياكل البيانات",
+    "trees": "عارض الأشجار",
+    "graphs": "خوارزميات الرسوم البيانية",
+    "practice": "التدريب العملي",
+    "compare": "مقارنة الخوارزميات"
+  },
+  "nav": {
+    "mainNavigation": "التنقّل الرئيسي",
+    "home": "الرئيسية",
+    "workspace": "مساحة العمل",
+    "courses": "المقررات",
+    "learningTools": "أدوات التعلّم",
+    "expandSidebar": "توسيع الشريط الجانبي",
+    "collapseSidebar": "طيّ الشريط الجانبي",
+    "homeLink": "الصفحة الرئيسية لـ FCAI-Visualizer",
+    "brandTagline": "تعلّم من خلال التصوّر التفاعلي",
+    "closeOverlay": "إغلاق التنقّل"
+  },
+  "sidebar": {
+    "supportTitle": "تعلّم بالممارسة",
+    "supportBody": "شاهد الخوارزمية أثناء عملها، ثم جرّبها بنفسك.",
+    "supportLink": "ابدأ التدريب العملي",
+    "faculty": "كلية الحاسبات والذكاء الاصطناعي",
+    "university": "جامعة القاهرة"
+  },
+  "actions": {
+    "random": "عشوائي",
+    "apply": "تطبيق",
+    "reset": "إعادة الضبط",
+    "start": "ابدأ",
+    "pause": "إيقاف مؤقت",
+    "play": "تشغيل",
+    "size": "الحجم",
+    "speed": "السرعة",
+    "customInputHint": "أدخل أعدادًا صحيحة تفصل بينها فواصل، ثم اضغط «تطبيق».",
+    "customInputPlaceholder": "مثال: 5، 3، 8، 1، 9",
+    "applyCustom": "تطبيق البيانات المدخلة",
+    "close": "إغلاق",
+    "clear": "مسح",
+    "generate": "إنشاء",
+    "stepBack": "خطوة للخلف",
+    "stepForward": "خطوة للأمام"
+  },
+  "panel": {
+    "description": "الوصف",
+    "complexity": {
+      "title": "التعقيد الزمني والمكاني",
+      "best": "زمن أفضل حالة:",
+      "average": "متوسط الزمن:",
+      "worst": "زمن أسوأ حالة:",
+      "space": "تعقيد المساحة:"
+    }
+  },
+  "codePanel": {
+    "title": "التنفيذ",
+    "ariaLabel": "تنفيذ الخوارزمية",
+    "viewIn": "العرض بـ {{lang}}"
+  },
+  "notFound": {
+    "eyebrow": "404 · الصفحة غير موجودة",
+    "title": "يبدو أن هذه الصفحة ضلّت طريقها.",
+    "body": "قد يكون الرابط تغيّر، لكن يمكنك متابعة التعلّم من الصفحة الرئيسية.",
+    "backHome": "العودة إلى الصفحة الرئيسية"
+  }
+}

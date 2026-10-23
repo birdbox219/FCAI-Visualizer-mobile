@@ -1,0 +1,20 @@
+{
+  "title": "探索",
+  "canvasAria": "探索アルゴリズムの可視化エリア",
+  "descriptionFallback": "{{name}}による探索",
+  "target": "探索対象：",
+  "result": {
+    "foundAt": "✅ インデックス {{index}} で見つかりました",
+    "notFound": "❌ 見つかりません"
+  },
+  "legend": {
+    "unseen": "未確認",
+    "scanned": "確認済み",
+    "current": "現在位置",
+    "found": "発見",
+    "notFound": "未発見"
+  },
+  "canvas": {
+    "emptyState": "配列を生成して始めましょう"
+  }
+}
